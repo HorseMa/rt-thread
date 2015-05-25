@@ -19,3 +19,8 @@ build
 *.a
 *.i
 *.d
+*.pbi
+*.cout
+*.out
+*.pbd
+*.browse
