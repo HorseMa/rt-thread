@@ -129,7 +129,7 @@ void DebugMon_Handler(void)
 *******************************************************************************/
 void EXTI4_IRQHandler(void)
 {
-    extern void rt_dm9000_isr(void);
+    extern void enc28j60_isr(void);
 
     /* enter interrupt */
     rt_interrupt_enter();
@@ -137,7 +137,7 @@ void EXTI4_IRQHandler(void)
     /* Clear the DM9000A EXTI line pending bit */
     EXTI_ClearITPendingBit(EXTI_Line4);
 
-    rt_dm9000_isr();
+    enc28j60_isr();
 
     /* leave interrupt */
     rt_interrupt_leave();
